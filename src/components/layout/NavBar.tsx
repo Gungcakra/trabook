@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-full z-50 top-0 start-0 flex justify-center">
-      <div className="md:w-4/5 w-full  flex items-center justify-around py-3 px-4">
+      <div className="md:w-4/5 w-full flex items-center justify-around py-3 px-4">
       
         <a href="/" className="flex items-center space-x-3 ">
           <img src={logo} className="w-[150px]" alt="Trabook Logo" />
@@ -52,7 +52,7 @@ const Navbar = () => {
 
         <button
           onClick={() => setShowSidebar(!showSidebar)}
-          className="md:hidden p-2 w-10 h-10 text-zinc-200 rounded-lg"
+          className="md:hidden p-2 w-10 h-10 text-primary-light rounded-lg"
         >
           <FontAwesomeIcon icon={faBars} className="w-5 h-5" />
         </button>
