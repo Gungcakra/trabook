@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { a } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/images/logos/logo.png";
@@ -18,35 +18,35 @@ const Navbar = () => {
 
         <div className="hidden md:flex flex-grow justify-center space-x-6">
           {[
-            { name: "Home", link: "/" },
-            { name: "About", link: "/about" },
-            { name: "Destination", link: "/destination" },
-            { name: "Tour", link: "/tour" },
-            { name: "Blog", link: "/blog" },
+            { name: "Home", a: "/" },
+            { name: "About", a: "/about" },
+            { name: "Destination", a: "/destination" },
+            { name: "Tour", a: "/tour" },
+            { name: "Blog", a: "/blog" },
           ].map((item, index) => (
-            <Link
+            <a
               key={index}
-              to={item.link}
+              href={item.a}
               className="font-semibold text-black transition duration-300 ease-in-out hover:text-primary-light"
             >
               {item.name}
-            </Link>
+            </a>
           ))}
         </div>
 
         <div className="hidden md:flex space-x-4">
-          <Link
-            to="/login"
+          <a
+            href="/login"
             className="bg-white text-primary-light px-4 py-2 rounded-md transition duration-300 ease-in-out font-semibold"
           >
             Sign In
-          </Link>
-          <Link
-            to="/register"
+          </a>
+          <a
+            href="/register"
             className="bg-primary-light text-white px-4 py-2 rounded-md transition duration-300 ease-in-out hover:shadow-lg hover:shadow-primary-light font-semibold"
           >
             Sign Up
-          </Link>
+          </a>
         </div>
 
 
@@ -65,38 +65,38 @@ const Navbar = () => {
         >
           <ul className="flex flex-col p-4 gap-5 h-full">
             {[
-              { name: "Home", link: "/" },
-              { name: "About", link: "/about" },
-              { name: "Destination", link: "/destination" },
-              { name: "Tour", link: "/tour" },
-              { name: "Blog", link: "/blog" },
+              { name: "Home", a: "/" },
+              { name: "About", a: "/about" },
+              { name: "Destination", a: "/destination" },
+              { name: "Tour", a: "/tour" },
+              { name: "Blog", a: "/blog" },
             ].map((item, index) => (
               <li key={index}>
-                <Link
-                  to={item.link}
+                <a
+                  href={item.a}
                   className="font-semibold text-black transition duration-300 ease-in-out hover:text-primary-light"
                 >
                   {item.name}
-                </Link>
+                </a>
               </li>
             ))}
 
             {/* Login & Register (di Sidebar saat Mobile) */}
             <li>
-              <Link
-                to="/login"
-                className="font-semibold text-black transition duration-300 ease-in-out hover:text-primary-light"
-              >
-                Login
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/register"
+              <a
+                href="/login"
                 className="bg-primary-light text-white px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-primary-dark block text-center"
               >
-                Register
-              </Link>
+                Sign In
+              </a>
+            </li>
+            <li>
+              <a
+                href="/register"
+                className="bg-primary-light text-white px-4 py-2 rounded-md transition duration-300 ease-in-out hover:bg-primary-dark block text-center"
+              >
+                Sign Up
+              </a>
             </li>
           </ul>
         </div>
