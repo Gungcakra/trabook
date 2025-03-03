@@ -12,7 +12,7 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ title, image, location, price, rating, link }) => {
     return (
-        <div className="flex flex-col border rounded-lg shadow-md w-[270px] h-[400px] transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-primary-light/50 hover:cursor-pointer">
+        <div className="flex flex-col border rounded-lg shadow-md min-w-[270px] h-[400px] transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-primary-light/50 hover:cursor-pointer">
            <div className="w-full h-[290px]">
                 <img src={image} alt={title} className="w-full h-full object-cover rounded-lg" />
            </div>
