@@ -104,8 +104,9 @@ const scrollRight = () => {
             ))}
         </div>
         <div className="flex w-full justify-center mt-4 gap-2">
-          <button className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white" onClick={scrollLeft}><FontAwesomeIcon icon={faArrowLeft} /></button>
-          <button className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white" onClick={scrollRight}><FontAwesomeIcon icon={faArrowRight} /></button>
+            <button className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-10 h-10 flex items-center justify-center" onClick={scrollLeft}><FontAwesomeIcon icon={faArrowLeft} /></button>
+
+          <button className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-10 h-10" onClick={scrollRight}><FontAwesomeIcon icon={faArrowRight} /></button>
         </div>
       </div>
     </div>
