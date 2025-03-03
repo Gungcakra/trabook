@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Navbar from "./components/layout/NavBar";
+import Destination from "./pages/Destination";
 // import Navbar from "./components/layout/NavBar";
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
       <Navbar />
       <Home />
       <About />
-      <Contact />
+      <Destination />
     </div>
   );
 }
