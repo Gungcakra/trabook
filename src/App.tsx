@@ -2,11 +2,12 @@
 import "./App.css";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Contact from "./pages/Contact";
+// import Contact from "./pages/Contact";
 import Navbar from "./components/layout/NavBar";
 import Destination from "./pages/Destination";
 import Vacation from "./pages/Vacation";
 import PeopleAbout from "./pages/PeopleAbout";
+import Blog from "./pages/Blog";
 // import Navbar from "./components/layout/NavBar";
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
       <Destination />
       <Vacation />
       <PeopleAbout />
+      <Blog />
     </div>
   );
 }

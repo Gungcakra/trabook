@@ -2,7 +2,7 @@ import homeImg from "../assets/images/hero.png";
 const Home = () => {
   return (
     <>
-      <div className="w-full md:min-h-screen  min-h-fit flex flex-col justify-center items-center bg-[#FEFCFB] pb-20">
+      <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center bg-[#FEFCFB] pb-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="flex flex-col items-center justify-center">
             <div className="max-w-md w-full flex flex-col gap-10">
