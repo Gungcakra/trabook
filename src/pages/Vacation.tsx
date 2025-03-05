@@ -3,10 +3,10 @@ import des1 from '../assets/images/destination/des1.png';
 import des2 from '../assets/images/destination/des2.png';
 import des3 from '../assets/images/destination/des3.png';
 import des4 from '../assets/images/destination/des4.png';
-import Card from '../components/ui/Card';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import CardVacation from '../components/ui/CardVacation';
 
-const Destination = () => {
+const Vacation = () => {
   const data = [
     {
       title: "Marid",
@@ -82,24 +82,23 @@ const scrollRight = () => {
   return (
     <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center p-4 ">
       <p className="text-4xl font-bold text-center">
-        Exclusive <span className="text-primary-light">deals & discounts</span>
+        Best <span className="text-primary-light">vacation plan</span>
       </p>
       <p className="text-center text-gray-500 mt-4 max-w-sm text-lg">
-        Discover our fantastic early booking discounts & start planning your
-        journey.
+      Plan your perfect vacation with our travel agency. Choose among hundreds of all-inclusive offers! 
       </p>
 
       <div className="flex w-full items-center flex-col">
         <div className="flex md:w-3/4 w-full gap-3 mt-4 overflow-x-scroll scrollbar-hide py-4 " style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {data.map((item, index) => (
-              <Card 
+              <CardVacation 
               key={index}
               title={item.title}
               image={item.image}
               location={item.location}
               price={item.price.toString()}
               rating={item.rating}
-              link="/destination"
+              link="/Vacation"
               />
             ))}
         </div>
@@ -112,4 +111,4 @@ const scrollRight = () => {
     </div>
   );
 };
-export default Destination;
+export default Vacation;
