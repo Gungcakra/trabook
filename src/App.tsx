@@ -6,6 +6,7 @@ import Contact from "./pages/Contact";
 import Navbar from "./components/layout/NavBar";
 import Destination from "./pages/Destination";
 import Vacation from "./pages/Vacation";
+import PeopleAbout from "./pages/PeopleAbout";
 // import Navbar from "./components/layout/NavBar";
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <About />
       <Destination />
       <Vacation />
+      <PeopleAbout />
     </div>
   );
 }

@@ -1,8 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import des1 from "../assets/images/destination/des1.png";
-import des2 from "../assets/images/destination/des2.png";
-import des3 from "../assets/images/destination/des3.png";
-import des4 from "../assets/images/destination/des4.png";
+import vac1 from "../assets/images/vacation/vac1.png";
+import vac2 from "../assets/images/vacation/vac2.png";
+import vac3 from "../assets/images/vacation/vac3.png";
 import { faArrowLeft, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import CardVacation from "../components/ui/CardVacation";
 import { useRef } from "react";
@@ -11,60 +10,47 @@ const Vacation = () => {
   const data = [
     {
       title: "Marid",
-      location: "Paid",
+      day: "10",
       rating: "4.5",
       price: 850,
-      image: des1,
+      image: vac1,
     },
     {
       title: "Forenze",
-      location: "Italy",
+      day: "7",
       rating: "4.5",
       price: 750,
-      image: des2,
+      image: vac2,
     },
     {
       title: "Paris",
-      location: "France",
+      day: "10",
       rating: "4.4",
       price: 559,
-      image: des3,
-    },
-    {
-      title: "London",
-      location: "UK",
-      rating: "4.5",
-      price: 850,
-      image: des4,
+      image: vac3,
     },
     {
       title: "Marid",
-      location: "Paid",
+      day: "10",
       rating: "4.5",
       price: 850,
-      image: des1,
+      image: vac1,
     },
     {
       title: "Forenze",
-      location: "Italy",
+      day: "7",
       rating: "4.5",
       price: 750,
-      image: des2,
+      image: vac2,
     },
     {
       title: "Paris",
-      location: "France",
+      day: "10",
       rating: "4.4",
       price: 559,
-      image: des3,
+      image: vac3,
     },
-    {
-      title: "London",
-      location: "UK",
-      rating: "4.5",
-      price: 850,
-      image: des4,
-    },
+ 
   ];
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -86,7 +72,7 @@ const Vacation = () => {
       <p className="text-4xl font-bold text-center">
         Best <span className="text-primary-light">vacation plan</span>
       </p>
-      <p className="text-center text-gray-500 mt-4 max-w-sm text-lg">
+      <p className="text-center text-gray-500 mt-4 max-w-lg text-lg">
         Plan your perfect vacation with our travel agency. Choose among hundreds
         of all-inclusive offers!
       </p>
@@ -117,7 +103,7 @@ const Vacation = () => {
               key={index}
               title={item.title}
               image={item.image}
-              location={item.location}
+              day={item.day}
               price={item.price.toString()}
               rating={item.rating}
               link="/Vacation"
