@@ -4,7 +4,7 @@ import locationIcon from "../assets/images/icon/location.png";
 
 const About = () => {
   return (
-    <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center bg-[#F7F8FC] p-4">
+    <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center bg-[#F7F8FC] p-4" id="">
       <p className="text-4xl font-bold text-center">
         Things you need <span className="text-primary-light">to do</span>
       </p>

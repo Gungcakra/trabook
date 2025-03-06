@@ -97,7 +97,7 @@ const scrollRight = () => {
   }
 };
   return (
-    <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center p-4 ">
+    <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center p-4 " id="blog">
       <p className="text-4xl font-bold text-center">
         Get update with <span className="text-primary-light">latest blog</span>
       </p>

@@ -1,7 +1,7 @@
 import image from "../assets/images/about/comment.png";
 const PeopleAbout = () => {
   return (
-    <div className="flex w-full min-h-screen justify-center items-center bg-[#F7F8FC]">
+    <div className="flex w-full min-h-screen justify-center items-center bg-[#F7F8FC]" id="about">
       <div className="flex flex-col w-2/4 h-1/2  items-center">
         <div className="1/2 flex flex-col items-start gap-5">
           <p className="text-4xl font-bold text-start">

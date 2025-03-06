@@ -68,7 +68,7 @@ const Vacation = () => {
   };
 
   return (
-    <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center p-4 ">
+    <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center p-4 " id="tour">
       <p className="text-4xl font-bold text-center">
         Best <span className="text-primary-light">vacation plan</span>
       </p>

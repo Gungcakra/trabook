@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { a } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import logo from "../../assets/images/logos/logo.png";
@@ -8,7 +7,7 @@ const Navbar = () => {
   const [showSidebar, setShowSidebar] = useState(false);
 
   return (
-    <nav className="w-full z-50 top-0 start-0 flex justify-center">
+    <nav className="w-full z-50 top-0 start-0 flex justify-center fixed bg-white">
       <div className="md:w-4/5 w-full flex items-center justify-around py-3 px-4">
       
         <a href="/" className="flex items-center space-x-3 ">
@@ -18,11 +17,11 @@ const Navbar = () => {
 
         <div className="hidden md:flex flex-grow justify-center space-x-6">
           {[
-            { name: "Home", a: "/" },
-            { name: "About", a: "/about" },
-            { name: "Destination", a: "/destination" },
-            { name: "Tour", a: "/tour" },
-            { name: "Blog", a: "/blog" },
+            { name: "Home", a: "#home" },
+            { name: "About", a: "#about" },
+            { name: "Destination", a: "#destination" },
+            { name: "Tour", a: "#tour" },
+            { name: "Blog", a: "#blog" },
           ].map((item, index) => (
             <a
               key={index}
