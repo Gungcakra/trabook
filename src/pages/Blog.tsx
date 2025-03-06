@@ -1,69 +1,86 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import des1 from '../assets/images/destination/des1.png';
-import des2 from '../assets/images/destination/des2.png';
-import des3 from '../assets/images/destination/des3.png';
-import des4 from '../assets/images/destination/des4.png';
-import Card from '../components/ui/Card';
+import blog1 from '../assets/images/blog/blog1.png';
+import blog2 from '../assets/images/blog/blog2.png';
+import blog3 from '../assets/images/blog/blog3.png';
+import blog4 from '../assets/images/blog/blog4.png';
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import BlogCard from '../components/ui/BlogCard';
 
 const Blog = () => {
   const data = [
     {
-      title: "Marid",
-      location: "Paid",
-      rating: "4.5",
-      price: 850,
-      image: des1,
+      title: "The Amazing Difference a Year of Travelling .",
+      image: blog1,
+      date: "July 27, 2021",
+      link: "/blog",
     },
     {
-      title: "Forenze",
-      location: "Italy",
-      rating: "4.5",
-      price: 750,
-      image: des2,
+      title: "Travel far enough, you meet yourself.",
+      image: blog2,
+      date: "July 27, 2021",
+      link: "/blog",
     },
     {
-      title: "Paris",
-      location: "France",
-      rating: "4.4",
-      price: 559,
-      image: des3,
+      title: "How to Save Money While Visiting Africa .",
+      image: blog3,
+      date: "July 27, 2021",
+      link: "/blog",
     },
     {
-      title: "London",
-      location: "UK",
-      rating: "4.5",
-      price: 850,
-      image: des4,
+      title: "Reflections on 5 Months of Travel: Time to Hang",
+      image: blog4,
+      date: "July 27, 2021",
+      link: "/blog",
     },
     {
-      title: "Marid",
-      location: "Paid",
-      rating: "4.5",
-      price: 850,
-      image: des1,
+      title: "The Amazing Difference a Year of Travelling .",
+      image: blog1,
+      date: "July 27, 2021",
+      link: "/blog",
     },
     {
-      title: "Forenze",
-      location: "Italy",
-      rating: "4.5",
-      price: 750,
-      image: des2,
+      title: "Travel far enough, you meet yourself.",
+      image: blog2,
+      date: "July 27, 2021",
+      link: "/blog",
     },
     {
-      title: "Paris",
-      location: "France",
-      rating: "4.4",
-      price: 559,
-      image: des3,
+      title: "How to Save Money While Visiting Africa .",
+      image: blog3,
+      date: "July 27, 2021",
+      link: "/blog",
     },
     {
-      title: "London",
-      location: "UK",
-      rating: "4.5",
-      price: 850,
-      image: des4,
+      title: "Reflections on 5 Months of Travel: Time to Hang",
+      image: blog4,
+      date: "July 27, 2021",
+      link: "/blog",
     },
+    {
+      title: "The Amazing Difference a Year of Travelling .",
+      image: blog1,
+      date: "July 27, 2021",
+      link: "/blog",
+    },
+    {
+      title: "Travel far enough, you meet yourself.",
+      image: blog2,
+      date: "July 27, 2021",
+      link: "/blog",
+    },
+    {
+      title: "How to Save Money While Visiting Africa .",
+      image: blog3,
+      date: "July 27, 2021",
+      link: "/blog",
+    },
+    {
+      title: "Reflections on 5 Months of Travel: Time to Hang",
+      image: blog4,
+      date: "July 27, 2021",
+      link: "/blog",
+    },
+    
     
   ];
 const scrollLeft = () => {
@@ -86,23 +103,30 @@ const scrollRight = () => {
       </p>
 
       <div className="flex w-full items-center flex-col">
-        <div className="flex md:w-3/4 w-full gap-3 mt-4 overflow-x-scroll scrollbar-hide py-4 " style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+        <div className="blog-container flex md:w-3/4 w-full gap-3 mt-4 overflow-x-scroll scrollbar-hide py-4 " style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             {data.map((item, index) => (
-              <Card 
+              <BlogCard 
               key={index}
               title={item.title}
               image={item.image}
-              location={item.location}
-              price={item.price.toString()}
-              rating={item.rating}
+              date={item.date}
               link="/destination"
               />
             ))}
         </div>
         <div className="flex w-full justify-center mt-4 gap-2">
-            <button className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-10 h-10 flex items-center justify-center" onClick={scrollLeft}><FontAwesomeIcon icon={faArrowLeft} /></button>
-
-          <button className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-10 h-10" onClick={scrollRight}><FontAwesomeIcon icon={faArrowRight} /></button>
+          {Array.from({ length: Math.ceil(data.length / 4) }).map((_, index) => (
+            <button
+              key={index}
+              className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-2 h-2 flex items-center justify-center bg-gray-200"
+              onClick={() => {
+          const container = document.querySelector('.blog-container');
+          if (container) {
+            container.scrollTo({ left: index * container.clientWidth, behavior: 'smooth' });
+          }
+              }}
+            />
+          ))}
         </div>
       </div>
     </div>
