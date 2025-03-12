@@ -10,7 +10,7 @@ interface CardProps {
     link: string;
 }
 
-const CardVacation: React.FC<CardProps> = ({ title, image, day, price, rating, link }) => {
+const CardVacation: React.FC<CardProps> = ({ title, image, day, price, rating }) => {
     return (
         <div className="flex flex-col border rounded-lg shadow-md min-w-[370px] h-[400px] transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-primary-light/50 hover:cursor-pointer">
            <div className="w-full h-[290px]">
