@@ -7,7 +7,7 @@ interface CardProps {
     link: string;
 }
 
-const BlogCard: React.FC<CardProps> = ({ title, image, date, link }) => {
+const BlogCard: React.FC<CardProps> = ({ title, image, date }) => {
     return (
         <div className="flex flex-col border rounded-lg shadow-md min-w-[270px] h-[400px] transition-all duration-300 ease-in-out hover:shadow-lg hover:shadow-primary-light/50 hover:cursor-pointer">
            <div className="w-full h-[290px]">

@@ -1,9 +1,9 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import blog1 from '../assets/images/blog/blog1.png';
 import blog2 from '../assets/images/blog/blog2.png';
 import blog3 from '../assets/images/blog/blog3.png';
 import blog4 from '../assets/images/blog/blog4.png';
-import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+// import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import BlogCard from '../components/ui/BlogCard';
 
 const Blog = () => {
@@ -83,19 +83,19 @@ const Blog = () => {
     
     
   ];
-const scrollLeft = () => {
-  const container = document.querySelector('.overflow-x-scroll');
-  if (container) {
-    container.scrollBy({ left: -300, behavior: 'smooth' });
-  }
-};
+// const scrollLeft = () => {
+//   const container = document.querySelector('.overflow-x-scroll');
+//   if (container) {
+//     container.scrollBy({ left: -300, behavior: 'smooth' });
+//   }
+// };
 
-const scrollRight = () => {
-  const container = document.querySelector('.overflow-x-scroll');
-  if (container) {
-    container.scrollBy({ left: 300, behavior: 'smooth' });
-  }
-};
+// const scrollRight = () => {
+//   const container = document.querySelector('.overflow-x-scroll');
+//   if (container) {
+//     container.scrollBy({ left: 300, behavior: 'smooth' });
+//   }
+// };
   return (
     <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center p-4 " id="blog">
       <p className="text-4xl font-bold text-center">
