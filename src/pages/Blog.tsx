@@ -97,15 +97,15 @@ const Blog = () => {
 //   }
 // };
   return (
-    <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center p-4 " id="blog">
-      <p className="text-4xl font-bold text-center">
+    <section className="w-full flex flex-col justify-center items-center py-16 md:py-24 px-4" id="blog">
+      <h2 className="text-3xl md:text-4xl font-bold text-center">
         Get update with <span className="text-primary-light">latest blog</span>
-      </p>
+      </h2>
 
       <div className="flex w-full items-center flex-col">
-        <div className="blog-container flex md:w-3/4 w-full gap-3 mt-4 overflow-x-scroll scrollbar-hide py-4 " style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+        <div className="blog-container flex md:w-3/4 w-full gap-5 mt-8 overflow-x-auto scrollbar-hide py-4 snap-x snap-mandatory">
             {data.map((item, index) => (
-              <BlogCard 
+              <BlogCard
               key={index}
               title={item.title}
               image={item.image}
@@ -114,11 +114,12 @@ const Blog = () => {
               />
             ))}
         </div>
-        <div className="flex w-full justify-center mt-4 gap-2">
+        <div className="flex w-full justify-center mt-6 gap-2">
           {Array.from({ length: Math.ceil(data.length / 4) }).map((_, index) => (
             <button
               key={index}
-              className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-2 h-2 flex items-center justify-center bg-gray-200"
+              aria-label={`Go to blog page ${index + 1}`}
+              className="duration-300 ease-in-out hover:bg-primary-light rounded-full w-2.5 h-2.5 bg-gray-300"
               onClick={() => {
           const container = document.querySelector('.blog-container');
           if (container) {
@@ -129,7 +130,7 @@ const Blog = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Blog;

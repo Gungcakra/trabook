@@ -23,7 +23,7 @@ function App() {
     //     </div>
     //   </Router>
 
-    <div className="w-full h-screen bg-white flex flex-col items-center">
+    <div className="w-full min-h-screen bg-white flex flex-col items-center overflow-x-hidden">
       <Navbar />
       <Home />
       <About />

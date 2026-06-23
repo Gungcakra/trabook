@@ -67,32 +67,32 @@ const Destination = () => {
     
   ];
 const scrollLeft = () => {
-  const container = document.querySelector('.overflow-x-scroll');
+  const container = document.querySelector('.destination-scroll');
   if (container) {
     container.scrollBy({ left: -300, behavior: 'smooth' });
   }
 };
 
 const scrollRight = () => {
-  const container = document.querySelector('.overflow-x-scroll');
+  const container = document.querySelector('.destination-scroll');
   if (container) {
     container.scrollBy({ left: 300, behavior: 'smooth' });
   }
 };
   return (
-    <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center p-4 " id="destination">
-      <p className="text-4xl font-bold text-center">
+    <section className="w-full flex flex-col justify-center items-center py-16 md:py-24 px-4" id="destination">
+      <h2 className="text-3xl md:text-4xl font-bold text-center">
         Exclusive <span className="text-primary-light">deals & discounts</span>
-      </p>
-      <p className="text-center text-gray-500 mt-4 max-w-sm text-lg">
+      </h2>
+      <p className="text-center text-gray-500 mt-4 max-w-sm text-base md:text-lg">
         Discover our fantastic early booking discounts & start planning your
         journey.
       </p>
 
       <div className="flex w-full items-center flex-col">
-        <div className="flex md:w-3/4 w-full gap-3 mt-4 overflow-x-scroll scrollbar-hide py-4 " style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+        <div className="destination-scroll flex md:w-3/4 w-full gap-5 mt-8 overflow-x-auto scrollbar-hide py-4 snap-x snap-mandatory">
             {data.map((item, index) => (
-              <Card 
+              <Card
               key={index}
               title={item.title}
               image={item.image}
@@ -103,13 +103,13 @@ const scrollRight = () => {
               />
             ))}
         </div>
-        <div className="flex w-full justify-center mt-4 gap-2">
-            <button className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-10 h-10 flex items-center justify-center" onClick={scrollLeft}><FontAwesomeIcon icon={faArrowLeft} /></button>
+        <div className="flex w-full justify-center mt-6 gap-3">
+            <button aria-label="Scroll left" className="border border-gray-200 duration-300 ease-in-out hover:bg-primary-light hover:border-primary-light rounded-full hover:text-white w-11 h-11 flex items-center justify-center" onClick={scrollLeft}><FontAwesomeIcon icon={faArrowLeft} /></button>
 
-          <button className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-10 h-10" onClick={scrollRight}><FontAwesomeIcon icon={faArrowRight} /></button>
+          <button aria-label="Scroll right" className="border border-gray-200 duration-300 ease-in-out hover:bg-primary-light hover:border-primary-light rounded-full hover:text-white w-11 h-11 flex items-center justify-center" onClick={scrollRight}><FontAwesomeIcon icon={faArrowRight} /></button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Destination;

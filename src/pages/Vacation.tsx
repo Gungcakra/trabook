@@ -68,26 +68,28 @@ const Vacation = () => {
   };
 
   return (
-    <div className="w-full md:min-h-screen min-h-fit flex flex-col justify-center items-center p-4 " id="tour">
-      <p className="text-4xl font-bold text-center">
+    <section className="w-full flex flex-col justify-center items-center py-16 md:py-24 px-4" id="tour">
+      <h2 className="text-3xl md:text-4xl font-bold text-center">
         Best <span className="text-primary-light">vacation plan</span>
-      </p>
-      <p className="text-center text-gray-500 mt-4 max-w-lg text-lg">
+      </h2>
+      <p className="text-center text-gray-500 mt-4 max-w-lg text-base md:text-lg">
         Plan your perfect vacation with our travel agency. Choose among hundreds
         of all-inclusive offers!
       </p>
 
       <div className="flex w-full items-center flex-col">
-        <div className="flex w-3/4 justify-end mt-4 gap-2">
+        <div className="flex md:w-3/4 w-full justify-end mt-6 gap-3">
           <button
-            className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-10 h-10 flex items-center justify-center"
+            aria-label="Scroll left"
+            className="border border-gray-200 duration-300 ease-in-out hover:bg-primary-light hover:border-primary-light rounded-full hover:text-white w-11 h-11 flex items-center justify-center"
             onClick={scrollLeft}
           >
             <FontAwesomeIcon icon={faArrowLeft} />
           </button>
 
           <button
-            className="duration-300 ease-in-out hover:bg-primary-light rounded-full p-2 hover:text-white w-10 h-10"
+            aria-label="Scroll right"
+            className="border border-gray-200 duration-300 ease-in-out hover:bg-primary-light hover:border-primary-light rounded-full hover:text-white w-11 h-11 flex items-center justify-center"
             onClick={scrollRight}
           >
             <FontAwesomeIcon icon={faArrowRight} />
@@ -95,8 +97,7 @@ const Vacation = () => {
         </div>
         <div
           ref={containerRef}
-          className="flex md:w-3/4 w-full gap-3 mt-4 overflow-x-scroll scrollbar-hide py-4 "
-          style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          className="flex md:w-3/4 w-full gap-5 mt-4 overflow-x-auto scrollbar-hide py-4 snap-x snap-mandatory"
         >
           {data.map((item, index) => (
             <CardVacation
@@ -111,7 +112,7 @@ const Vacation = () => {
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 export default Vacation;
